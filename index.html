@@ -1,923 +1,991 @@
-<!DOCTYPE html>
-<img
-    src="signal-2026-07-19-193510.jpeg"
-    alt="Starcher Handyman Services logo">
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starcher Handyman Services</title>
-
-  <meta
-    name="description"
-    content="Starcher Handyman Services provides reliable home repair, maintenance, painting, installations, and property improvement services."
-  >
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional home repairs, installations, electrical work, finishing work, and general handyman services backed by 20+ years of combined experience.">
+  <title>Starcher Services | Reliable Handyman Services</title>
   <style>
-    :root {
-      --black: #11161b;
-      --dark-gray: #222a31;
-      --gold: #d39b1d;
-      --light-gold: #f5c452;
-      --white: #ffffff;
-      --light: #f6f6f4;
-      --gray: #69737d;
-      --border: #e1e4e7;
-      --shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-      --radius: 18px;
-      --max-width: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark-gray);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 80px 0;
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 40px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: bold;
-      letter-spacing: 0.15em;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: var(--black);
-      line-height: 1.15;
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 7vw, 5rem);
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      margin-bottom: 16px;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: var(--gray);
-    }
-
-    .button {
-      align-items: center;
-      border: 2px solid transparent;
-      border-radius: 999px;
-      cursor: pointer;
-      display: inline-flex;
-      font-weight: bold;
-      justify-content: center;
-      padding: 14px 24px;
-      transition: 0.2s ease;
-    }
-
-    .button-primary {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .button-primary:hover {
-      background: var(--light-gold);
-      transform: translateY(-2px);
-    }
-
-    .button-outline {
-      border-color: rgba(255, 255, 255, 0.7);
-      color: var(--white);
-    }
-
-    .button-outline:hover {
-      background: var(--white);
-      color: var(--black);
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.97);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navigation {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      min-height: 82px;
-      gap: 24px;
-    }
-
-    .brand {
-      align-items: center;
-      display: flex;
-      gap: 14px;
-      font-weight: bold;
-    }
-
-    .brand img {
-      border-radius: 10px;
-      height: 66px;
-      object-fit: contain;
-      width: 66px;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-text strong {
-      color: var(--black);
-      font-size: 1.05rem;
-    }
-
-    .brand-text span {
-      color: var(--gold);
-      font-size: 0.67rem;
-      letter-spacing: 0.13em;
-      margin-top: 5px;
-      text-transform: uppercase;
-    }
-
-    .navigation-links {
-      align-items: center;
-      display: flex;
-      gap: 24px;
-      font-weight: bold;
-    }
-
-    .navigation-links a:hover {
-      color: var(--gold);
-    }
-
-    .hero {
-      background:
-        linear-gradient(
-          90deg,
-          rgba(17, 22, 27, 0.95),
-          rgba(17, 22, 27, 0.68)
-        ),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=85")
-        center / cover no-repeat;
-
-      color: var(--white);
-      min-height: 78vh;
-      display: grid;
-      place-items: center;
-    }
-
-    .hero-grid {
-      align-items: center;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 50px;
-      padding: 80px 0;
-    }
-
-    .hero h1,
-    .hero p {
-      color: var(--white);
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      margin-bottom: 30px;
-      max-width: 700px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .hero-logo {
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 24px;
-    }
-
-    .hero-logo img {
-      border-radius: 16px;
-      width: 100%;
-    }
-
-    .trust-bar {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      padding: 24px 0;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-
-    .service-icon {
-      align-items: center;
-      background: #fff4d7;
-      border-radius: 14px;
-      display: flex;
-      font-size: 1.8rem;
-      height: 56px;
-      justify-content: center;
-      margin-bottom: 18px;
-      width: 56px;
-    }
-
-    .about-section {
-      background: var(--light);
-    }
-
-    .about-grid {
-      align-items: center;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .about-image {
-      background:
-        url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85")
-        center / cover no-repeat;
-
-      border-radius: 26px;
-      box-shadow: var(--shadow);
-      min-height: 440px;
-    }
-
-    .checklist {
-      display: grid;
-      gap: 13px;
-      list-style: none;
-      margin-top: 25px;
-    }
-
-    .checklist li::before {
-      color: var(--gold);
-      content: "✓";
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .why-card {
-      background: var(--light);
-      border-radius: var(--radius);
-      padding: 26px;
-      text-align: center;
-    }
-
-    .why-card .symbol {
-      font-size: 1.9rem;
-    }
-
-    .why-card strong {
-      color: var(--black);
-      display: block;
-      margin: 10px 0 6px;
-    }
-
-    .projects-section {
-      background: var(--light);
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .project {
-      background-position: center;
-      background-size: cover;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      min-height: 280px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .project::after {
-      background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, 0.85)
-      );
-
-      bottom: 0;
-      color: var(--white);
-      content: attr(data-title);
-      font-weight: bold;
-      left: 0;
-      padding: 20px;
-      position: absolute;
-      right: 0;
-    }
-
-    .call-to-action {
-      background: var(--black);
-    }
-
-    .call-to-action-grid {
-      align-items: center;
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-    }
-
-    .call-to-action h2,
-    .call-to-action p {
-      color: var(--white);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 38px;
-    }
-
-    .contact-details {
-      display: grid;
-      gap: 15px;
-      margin-top: 24px;
-    }
-
-    .contact-details a {
-      color: var(--black);
-      font-weight: bold;
-    }
-
-    form {
-      display: grid;
-      gap: 15px;
-    }
-
-    input,
-    textarea {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font: inherit;
-      padding: 14px 16px;
-      width: 100%;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--gold);
-      outline: 2px solid rgba(211, 155, 29, 0.2);
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    footer {
-      background: #090d11;
-      color: var(--white);
-      padding: 30px 0;
-    }
-
-    footer p {
-      color: #c7ccd1;
-      text-align: center;
-    }
-
-    @media (max-width: 940px) {
-      .navigation-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-logo {
-        max-width: 470px;
-      }
-
-      .services-grid,
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid,
-      .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 620px) {
-      .section {
-        padding: 60px 0;
-      }
-
-      .brand-text {
-        display: none;
-      }
-
-      .services-grid,
-      .projects-grid,
-      .why-grid,
-      .trust-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-buttons .button {
-        width: 100%;
-      }
-
-      .hero-logo {
-        padding: 14px;
-      }
-
-      .call-to-action-grid {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
+:root {
+  --teal-950: #062f2e;
+  --teal-900: #073b3a;
+  --teal-800: #0a4c49;
+  --teal-700: #0f6b66;
+  --ivory: #f7f2e8;
+  --paper: #fffdf8;
+  --sand: #d8c6a3;
+  --copper: #c9783f;
+  --copper-dark: #a9532e;
+  --charcoal: #1d2826;
+  --muted: #64706c;
+  --line: #d9d5ca;
+  --display: "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --body: var(--font-geist-sans), Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 100;
+  background: white;
+  color: var(--teal-900);
+  padding: 0.8rem 1rem;
+  font-weight: 800;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  min-height: 92px;
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: var(--ivory);
+  background: rgba(6, 47, 46, 0.98);
+  border-bottom: 2px solid var(--copper);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.brand span {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.5vw, 2.35rem);
+  font-stretch: condensed;
+  font-weight: 900;
+}
+
+.brand small {
+  color: var(--sand);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3.25rem);
+  font-size: 0.94rem;
+  font-weight: 750;
+}
+
+.desktop-nav > a:not(.nav-quote) {
+  position: relative;
+  padding: 0.6rem 0;
+}
+
+.desktop-nav > a:not(.nav-quote)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.desktop-nav > a:hover::after,
+.desktop-nav > a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav-quote {
+  padding: 0.9rem 1.2rem;
+  border: 2px solid var(--copper);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.nav-quote:hover,
+.nav-quote:focus-visible {
+  background: var(--copper);
+  color: white;
+}
+
+.mobile-menu {
+  display: none;
+  position: relative;
+}
+
+.mobile-menu summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--copper);
+  font-weight: 800;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-menu nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.75rem);
+  width: min(78vw, 270px);
+  display: grid;
+  background: var(--teal-900);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mobile-menu nav a {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 700;
+}
+
+.hero {
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(440px, 0.92fr);
+  background: var(--ivory);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  padding: clamp(4rem, 7vw, 7rem) 5vw 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.copper-rule {
+  width: 116px;
+  height: 7px;
+  margin-bottom: 1.4rem;
+  background: var(--copper);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--teal-700);
+  font-size: 0.73rem;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow.copper {
+  color: var(--copper-dark);
+}
+
+.hero h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin-bottom: 1.4rem;
+  color: var(--teal-900);
+  font-family: var(--display);
+  font-size: clamp(4rem, 6.9vw, 7.1rem);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  color: var(--copper);
+}
+
+.hero-lead {
+  max-width: 640px;
+  margin: 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid #bdab87;
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.button {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  padding: 0.9rem 1.45rem;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: white;
+  background: var(--copper);
+  box-shadow: 7px 7px 0 rgba(7, 59, 58, 0.14);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: var(--copper-dark);
+  box-shadow: 4px 4px 0 rgba(7, 59, 58, 0.18);
+}
+
+.text-link {
+  width: fit-content;
+  padding: 0.6rem 0 0.35rem;
+  border-bottom: 2px solid var(--teal-700);
+  color: var(--teal-900);
+  font-weight: 850;
+}
+
+.text-link span {
+  display: inline-block;
+  margin-left: 0.55rem;
+  transition: transform 180ms ease;
+}
+
+.text-link:hover span,
+.text-link:focus-visible span {
+  transform: translateX(4px);
+}
+
+.hero-image-wrap {
+  position: relative;
+  min-height: 690px;
+  overflow: hidden;
+  background: var(--teal-800);
+}
+
+.hero-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 1;
+  width: 105px;
+  background: var(--ivory);
+  clip-path: polygon(0 0, 100% 0, 100% 12%, 40% 12%, 40% 38%, 100% 38%, 100% 66%, 40% 66%, 40% 87%, 100% 87%, 100% 100%, 0 100%);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% center;
+}
+
+.image-label {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+  padding: 1rem 1.2rem;
+  color: white;
+  background: rgba(6, 47, 46, 0.9);
+  border-left: 4px solid var(--copper);
+  backdrop-filter: blur(8px);
+}
+
+.image-label span,
+.image-label strong {
+  display: block;
+}
+
+.image-label span {
+  margin-bottom: 0.2rem;
+  color: var(--sand);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.image-label strong {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.trust-band {
+  padding: 1.7rem 4vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--ivory);
+  background: var(--teal-900);
+}
+
+.trust-band article {
+  min-height: 72px;
+  padding: 0 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.trust-band article:last-child {
+  border-right: 0;
+}
+
+.trust-mark {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  display: grid;
+  place-items: center;
+  color: var(--sand);
+  border: 2px solid var(--sand);
+  border-radius: 50%;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.trust-band p,
+.trust-band strong,
+.trust-band small {
+  display: block;
+  margin: 0;
+}
+
+.trust-band strong {
+  font-family: var(--display);
+  font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.trust-band small {
+  margin-top: 0.2rem;
+  color: #b8cac6;
+  font-size: 0.78rem;
+}
+
+.section {
+  padding: clamp(5rem, 9vw, 8rem) 5vw;
+}
+
+.section-heading {
+  max-width: 1280px;
+  margin: 0 auto 3.5rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+  gap: clamp(2rem, 6vw, 7rem);
+}
+
+.section-heading.compact {
+  grid-template-columns: minmax(0, 760px);
+}
+
+.section-heading h2,
+.about-copy h2,
+.quote-section h2 {
+  margin-bottom: 0;
+  color: var(--teal-900);
+  font-family: var(--display);
+  font-size: clamp(2.65rem, 4.8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.section-heading > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.services-section {
+  background: var(--paper);
+}
+
+.service-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.service-card {
+  min-height: 260px;
+  padding: 2rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.service-card > span {
+  color: var(--copper-dark);
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.service-card h3 {
+  margin: 2.2rem 0 0.8rem;
+  color: var(--teal-900);
+  font-family: var(--display);
+  font-size: 1.75rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.service-card:hover {
+  z-index: 1;
+  color: white;
+  background: var(--teal-800);
+  transform: translateY(-6px);
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover > span {
+  color: white;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: var(--ivory);
+}
+
+.about-panel,
+.about-copy {
+  padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 7vw, 7rem);
+}
+
+.about-panel {
+  position: relative;
+  color: white;
+  background: var(--teal-900);
+  overflow: hidden;
+}
+
+.about-panel::after {
+  content: "S";
+  position: absolute;
+  right: -0.05em;
+  bottom: -0.25em;
+  color: rgba(255, 255, 255, 0.035);
+  font-family: var(--display);
+  font-size: 23rem;
+  font-weight: 900;
+}
+
+.about-panel blockquote {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 2rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 3.6rem);
+  line-height: 1.15;
+}
+
+.signature {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--sand);
+  font-weight: 800;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-copy h2 {
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.about-copy p {
+  max-width: 740px;
+  margin: 0 0 1rem;
+  color: #4b5652;
+  font-size: 1.03rem;
+  line-height: 1.8;
+}
+
+.about-copy .text-link {
+  margin-top: 1rem;
+}
+
+.why-section {
+  background: white;
+}
+
+.process-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.process-grid article {
+  padding: 2.4rem;
+  background: var(--ivory);
+  border-top: 5px solid var(--copper);
+}
+
+.process-grid article > span {
+  display: block;
+  margin-bottom: 3rem;
+  color: var(--copper-dark);
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.process-grid h3 {
+  margin-bottom: 0.65rem;
+  color: var(--teal-900);
+  font-family: var(--display);
+  font-size: 1.65rem;
+  text-transform: uppercase;
+}
+
+.process-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.promise-row {
+  max-width: 1280px;
+  margin: 4rem auto 0;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.promise-row > div {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  border-right: 1px solid var(--line);
+}
+
+.promise-row > div:last-child {
+  border-right: 0;
+}
+
+.promise-row strong {
+  color: var(--teal-900);
+  font-family: var(--display);
+  font-size: 2.6rem;
+}
+
+.promise-row span {
+  max-width: 160px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.quote-section {
+  padding: clamp(5rem, 9vw, 8rem) 5vw;
+  text-align: center;
+  color: white;
+  background: var(--teal-900);
+}
+
+.quote-section .eyebrow {
+  color: var(--sand);
+}
+
+.quote-section h2 {
+  color: white;
+}
+
+.quote-section > p:not(.eyebrow) {
+  max-width: 660px;
+  margin: 1.4rem auto 2rem;
+  color: #c6d5d2;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.button-light {
+  color: var(--teal-900);
+  background: var(--ivory);
+}
+
+.button-light:hover,
+.button-light:focus-visible {
+  background: var(--sand);
+  box-shadow: 6px 6px 0 var(--copper);
+}
+
+footer {
+  min-height: 160px;
+  padding: 2.5rem 5vw;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem 2rem;
+  color: #aec2be;
+  background: var(--teal-950);
+  font-size: 0.78rem;
+}
+
+.footer-brand {
+  color: var(--ivory);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p:last-child {
+  grid-column: 2;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--copper);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1000px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    min-height: 610px;
+  }
+
+  .hero-image-wrap {
+    min-height: 520px;
+  }
+
+  .hero-image-wrap::before {
+    display: none;
+  }
+
+  .trust-band {
+    padding: 1.5rem 2rem;
+  }
+
+  .trust-band article {
+    padding: 0 1rem;
+  }
+
+  .trust-band small {
+    display: none;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    min-height: 76px;
+    padding: 0 1.1rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .hero-copy {
+    min-height: auto;
+    padding: 4.5rem 1.25rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.3rem, 16vw, 5.25rem);
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button,
+  .text-link {
+    width: 100%;
+  }
+
+  .hero-image-wrap {
+    min-height: 430px;
+  }
+
+  .image-label {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .trust-band {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.25rem;
+  }
+
+  .trust-band article {
+    padding: 1rem 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .trust-band article:last-child {
+    border-bottom: 0;
+  }
+
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-grid,
+  .process-grid,
+  .promise-row {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: 220px;
+  }
+
+  .about-panel,
+  .about-copy {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .promise-row > div {
+    padding: 1.25rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .promise-row > div:last-child {
+    border-bottom: 0;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem;
+  }
+
+  footer p:last-child {
+    grid-column: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+:root { --font-geist-sans: Arial, Helvetica, sans-serif; }
   </style>
 </head>
-
 <body>
+  <main>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-  <header>
-    <div class="container navigation">
-
-      <a class="brand" href="#home">
-        <img
-          src="starcher-logo.jpeg"
-          alt="Starcher Handyman Services logo"
-        >
-
-        <span class="brand-text">
-          <strong>Starcher Handyman</strong>
-          <span>Professional Home Services</span>
-        </span>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Starcher Services home">
+        <span>Starcher</span><small>Services</small>
       </a>
-
-      <nav class="navigation-links">
+      <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#why-us">Why Us</a>
+        <a class="nav-quote" href="#quote">Get a Free Quote <span aria-hidden="true">→</span></a>
       </nav>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation">Menu</summary>
+        <nav aria-label="Mobile navigation">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#quote">Get a Free Quote</a>
+        </nav>
+      </details>
+    </header>
 
-      <a class="button button-primary" href="tel:+10000000000">
-        Call Now
-      </a>
+    <div id="content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <span class="copper-rule" aria-hidden="true"></span>
+          <p class="eyebrow">Trusted home service professionals</p>
+          <h1>Reliable Work.<br>Honest Service.<br>Done Right<span>.</span></h1>
+          <p class="hero-lead">Local handyman services backed by more than 20 years of combined experience, clear communication, and workmanship built to last.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quote">Get a Free Quote <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#services">Explore Services <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="handyman-work.png" alt="Professional handyman carefully measuring a wood board">
+          <div class="image-label"><span>Built with care</span><strong>Finished with pride.</strong></div>
+        </div>
+      </section>
 
+      <section class="trust-band" aria-label="Why customers choose us">
+        <article><span class="trust-mark">20+</span><p><strong>Years Experience</strong><small>Combined field expertise</small></p></article>
+        <article><span class="trust-mark">✓</span><p><strong>Professional &amp; Reliable</strong><small>Clear, respectful service</small></p></article>
+        <article><span class="trust-mark">◇</span><p><strong>Quality Workmanship</strong><small>Work made to last</small></p></article>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="section-heading">
+          <div><p class="eyebrow copper">What we do</p><h2>One trusted team for the projects around your home.</h2></div>
+          <p>From the little fixes that keep getting put off to meaningful home improvements, Starcher Services brings skill, care, and dependable follow-through to every job.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><span>01</span><h3>Electrical</h3><p>Fixtures, switches, outlets, troubleshooting, and other everyday electrical projects.</p></article>
+          <article class="service-card"><span>02</span><h3>Repairs &amp; Maintenance</h3><p>Practical, lasting repairs that keep your home safe, functional, and looking its best.</p></article>
+          <article class="service-card"><span>03</span><h3>Finishing Work</h3><p>Trim, drywall touch-ups, caulking, hardware, and detail work completed with care.</p></article>
+          <article class="service-card"><span>04</span><h3>Installations</h3><p>From shelving and fixtures to appliances and home accessories, installed the right way.</p></article>
+          <article class="service-card"><span>05</span><h3>General Home Services</h3><p>A dependable helping hand for punch lists, improvements, upkeep, and one-off projects.</p></article>
+          <article class="service-card"><span>06</span><h3>Custom Projects</h3><p>Have something else in mind? Tell us about it—there’s a good chance we can help.</p></article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-panel">
+          <p class="eyebrow copper">Meet the owner</p>
+          <blockquote>“We started Starcher Services to be the kind of home service company you can truly trust.”</blockquote>
+          <p class="signature">— Ryan Starcher, Founder</p>
+        </div>
+        <div class="about-copy">
+          <h2>Good work starts with showing up the right way.</h2>
+          <p>We arrive on time, communicate clearly, and take pride in doing high-quality work that lasts. Every contractor and employee is legally authorized to work in the United States, and our whole team takes professionalism and reliability seriously.</p>
+          <p>We may not always be the cheapest option—but we promise to provide some of the best workmanship and service you can find.</p>
+          <a class="text-link" href="#quote">Tell us about your project <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="section why-section" id="why-us">
+        <div class="section-heading compact">
+          <div><p class="eyebrow copper">Our standard</p><h2>A simpler, more dependable service experience.</h2></div>
+        </div>
+        <div class="process-grid">
+          <article><span>01</span><h3>Start with a conversation</h3><p>Tell us what you need and we’ll ask the right questions.</p></article>
+          <article><span>02</span><h3>Get a clear quote</h3><p>We’ll explain the work and give you a straightforward estimate.</p></article>
+          <article><span>03</span><h3>Enjoy work done right</h3><p>We arrive prepared, respect your space, and finish with care.</p></article>
+        </div>
+        <div class="promise-row">
+          <div><strong>20+</strong><span>Years of combined experience</span></div>
+          <div><strong>01</strong><span>Clear point of contact</span></div>
+          <div><strong>100%</strong><span>Commitment to quality</span></div>
+        </div>
+      </section>
+
+      <section class="quote-section" id="quote">
+        <p class="eyebrow">Have a project in mind?</p>
+        <h2>Let’s get it off your list.</h2>
+        <p>Reach out for a free quote. We’ll be happy to learn about your next project and let you know how we can help.</p>
+        <!-- Replace your-email@example.com below with your real business email address. -->
+        <a class="button button-light" href="mailto:your-email@example.com">your-email@example.com <span aria-hidden="true">→</span></a>
+      </section>
     </div>
-  </header>
 
-  <main>
-
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-
-        <div>
-          <span class="eyebrow">
-            Reliable Home Repair and Maintenance
-          </span>
-
-          <h1>
-            Quality work for every corner of your home.
-          </h1>
-
-          <p>
-            Starcher Handyman Services provides dependable repairs,
-            installations, painting, maintenance, and property improvements
-            with careful workmanship and honest service.
-          </p>
-
-          <div class="hero-buttons">
-            <a class="button button-primary" href="#contact">
-              Request a Free Estimate
-            </a>
-
-            <a class="button button-outline" href="tel:+10000000000">
-              Call (000) 000-0000
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-logo">
-          <img
-            src="starcher-logo.jpeg"
-            alt="Starcher Handyman Services"
-          >
-        </div>
-
-      </div>
-    </section>
-
-    <section class="trust-bar">
-      <div class="container trust-grid">
-        <div>✓ Dependable Service</div>
-        <div>✓ Quality Workmanship</div>
-        <div>✓ Clear Estimates</div>
-        <div>✓ Respectful and Clean</div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow">Our Services</span>
-
-          <h2>
-            Professional help for repairs and improvements
-          </h2>
-
-          <p>
-            Contact us for a customized estimate based on your project,
-            property, and service needs.
-          </p>
-        </div>
-
-        <div class="services-grid">
-
-          <article class="card">
-            <div class="service-icon">🔨</div>
-            <h3>General Repairs</h3>
-            <p>
-              Drywall, trim, shelving, hardware, doors, fixtures,
-              and everyday household repairs.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon">🎨</div>
-            <h3>Painting</h3>
-            <p>
-              Interior painting, touch-ups, doors, trim,
-              and careful surface preparation.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon">💡</div>
-            <h3>Fixture Installation</h3>
-            <p>
-              Light fixtures, ceiling fans, curtain rods,
-              televisions, and wall-mounted items.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon">🚪</div>
-            <h3>Doors and Carpentry</h3>
-            <p>
-              Door adjustments, locks, handles, baseboards,
-              shelving, and minor carpentry.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon">🚿</div>
-            <h3>Plumbing Fixtures</h3>
-            <p>
-              Faucets, toilets, showerheads, disposals,
-              and minor fixture replacements.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon">🏠</div>
-            <h3>Property Maintenance</h3>
-            <p>
-              Rental repairs, punch lists, routine maintenance,
-              and seasonal property upkeep.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="container about-grid">
-
-        <div
-          class="about-image"
-          role="img"
-          aria-label="Handyman completing a home improvement project"
-        ></div>
-
-        <div>
-          <span class="eyebrow">About Us</span>
-
-          <h2>
-            Honest service and professional results
-          </h2>
-
-          <p>
-            Starcher Handyman Services helps homeowners complete repairs
-            and improvements without the stress of coordinating several
-            contractors. Every project receives personal attention,
-            straightforward communication, and respect for your property.
-          </p>
-
-          <ul class="checklist">
-            <li>Clear communication from start to finish</li>
-            <li>Respectful treatment of your home</li>
-            <li>Careful attention to detail</li>
-            <li>Flexible help for small and medium projects</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow">Why Choose Us</span>
-
-          <h2>
-            A straightforward approach to getting the job done
-          </h2>
-        </div>
-
-        <div class="why-grid">
-
-          <div class="why-card">
-            <div class="symbol">📅</div>
-            <strong>Reliable Scheduling</strong>
-            <p>
-              Clear communication about appointments and project timing.
-            </p>
-          </div>
-
-          <div class="why-card">
-            <div class="symbol">🧰</div>
-            <strong>Versatile Skills</strong>
-            <p>
-              One dependable professional for many household projects.
-            </p>
-          </div>
-
-          <div class="why-card">
-            <div class="symbol">🧹</div>
-            <strong>Clean Work Areas</strong>
-            <p>
-              Your space is protected and cleaned after the work is complete.
-            </p>
-          </div>
-
-          <div class="why-card">
-            <div class="symbol">💬</div>
-            <strong>Clear Estimates</strong>
-            <p>
-              Understandable information about the work and expected costs.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section projects-section" id="projects">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow">Recent Projects</span>
-
-          <h2>
-            Examples of work we can complete
-          </h2>
-
-          <p>
-            Replace these sample photographs with your own project photographs.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-
-          <div
-            class="project"
-            data-title="Interior Repairs"
-            style="
-              background-image:
-              url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80');
-            "
-          ></div>
-
-          <div
-            class="project"
-            data-title="Painting and Finishing"
-            style="
-              background-image:
-              url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80');
-            "
-          ></div>
-
-          <div
-            class="project"
-            data-title="Home Improvements"
-            style="
-              background-image:
-              url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80');
-            "
-          ></div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section call-to-action">
-      <div class="container call-to-action-grid">
-
-        <div>
-          <span class="eyebrow">Ready to Get Started?</span>
-
-          <h2>
-            Tell us what you need repaired or improved.
-          </h2>
-
-          <p>
-            Contact Starcher Handyman Services to request an estimate.
-          </p>
-        </div>
-
-        <a class="button button-primary" href="#contact">
-          Get a Free Estimate
-        </a>
-
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-
-        <div>
-          <span class="eyebrow">Contact Us</span>
-
-          <h2>
-            Request your estimate
-          </h2>
-
-          <p>
-            Replace the sample contact information below with your real
-            telephone number, email address, and service area.
-          </p>
-
-          <div class="contact-details">
-            <div>
-              📞
-              <a href="tel:+10000000000">
-                (000) 000-0000
-              </a>
-            </div>
-
-            <div>
-              ✉️
-              <a href="mailto:your@email.com">
-                your@email.com
-              </a>
-            </div>
-
-            <div>
-              📍 Your City and Service Area
-            </div>
-
-            <div>
-              🕒 Monday–Saturday, 8:00 AM–6:00 PM
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-
-          <form
-            action="mailto:your@email.com"
-            method="post"
-            enctype="text/plain"
-          >
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              required
-            >
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone number"
-              required
-            >
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email address"
-              required
-            >
-
-            <textarea
-              name="project"
-              placeholder="Describe the work you need"
-              required
-            ></textarea>
-
-            <button
-              class="button button-primary"
-              type="submit"
-            >
-              Send Request
-            </button>
-
-          </form>
-
-        </div>
-      </div>
-    </section>
-
+    <footer>
+      <a class="brand footer-brand" href="#top"><span>Starcher</span><small>Services</small></a>
+      <p>General home services • Repairs • Installations • Finishing work</p>
+      <p>© 2026 Starcher Services. All rights reserved.</p>
+    </footer>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        © 2026 Starcher Handyman Services. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
 </body>
 </html>
